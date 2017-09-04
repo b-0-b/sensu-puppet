@@ -1,3 +1,8 @@
+# Please don't use master branch
+Use branch `v2_25_0`. It has changes needed to resolve conflicts with other puppet modules in use.
+Also, this version requires some puppet modules to be updated for it to work at all.
+
+
 # Sensu-Puppet
 
 Installs and manages the open source monitoring framework [Sensu](http://sensuapp.org).
