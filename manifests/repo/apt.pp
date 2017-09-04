@@ -44,14 +44,15 @@ class sensu::repo::apt {
         'source' => $::sensu::repo_key_source,
       },
       before   => Package[$sensu::package::pkg_title],
-      notify   => Exec['apt-update'],
+      notify   => Class['apt::update'],
+#      notify   => Exec['apt-update'],
     }
 
-    exec {
-      'apt-update':
-        refreshonly => true,
-        command     => '/usr/bin/apt-get update';
-    }
+#    exec {
+#      'apt-update':
+#        refreshonly => true,
+#        command     => '/usr/bin/apt-get update';
+#    }
 
     if $::sensu::enterprise {
       $se_user = $::sensu::enterprise_user
