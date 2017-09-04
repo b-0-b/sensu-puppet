@@ -1,3 +1,6 @@
+# Changes to upstream
+- `notify   => Exec['apt-update']` changed to `notify   => Class['apt::update']` in `class sensu::repo::apt` to resolve conflict with `class confluent_kafka::install`
+
 # Sensu-Puppet
 
 Installs and manages the open source monitoring framework [Sensu](http://sensuapp.org).
